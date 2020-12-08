@@ -11,9 +11,10 @@ public class Exercise01 {
         String nomeArquivoOrigem = lerEntrada.nextLine();
         System.out.print("Nome do arquivo de destino: ");
         String nomeArquivoDestino = lerEntrada.nextLine();
-        InputStream is = new FileInputStream(nomeArquivoOrigem);
-        OutputStream os = new FileOutputStream(nomeArquivoDestino);
-        byte[] buffer = new byte[32];
+        InputStream is = Exercise01.class.getClassLoader().getResourceAsStream(nomeArquivoOrigem);
+        File file = new File("dsp_list02/resources/" + nomeArquivoDestino);
+        OutputStream os = new FileOutputStream(file);
+        byte[] buffer = new byte[128];
         int total_read;
         long t1 = System.currentTimeMillis();
         while((total_read = is.read(buffer)) > 0){
