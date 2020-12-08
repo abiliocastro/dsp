@@ -112,10 +112,9 @@ public class Exercise01 {
 
     private static Scanner getScanner(String nomeArquivo) {
         InputStream is;
-        try {
-            is = new FileInputStream(nomeArquivo);
-        } catch (FileNotFoundException e) {
-            System.out.println("Arquivo nao encontrado");
+        is = Exercise01.class.getClassLoader().getResourceAsStream(nomeArquivo);
+        if(is == null) {
+            System.out.println("Arquivo não encontrado");
             return null;
         }
         Scanner lerArquivo = new Scanner(is);

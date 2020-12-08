@@ -11,8 +11,9 @@ public class Exercise02 {
         String nomeArquivo = lerEntrada.nextLine();
         System.out.print("Nome da cópia do arquivo: ");
         String nomeCopiaArquivo = lerEntrada.nextLine();
-        InputStream is = new FileInputStream(nomeArquivo);
-        OutputStream os = new FileOutputStream(nomeCopiaArquivo);
+        InputStream is = Exercise02.class.getClassLoader().getResourceAsStream(nomeArquivo);
+        File file = new File("dsp_list01/resources/" + nomeCopiaArquivo);
+        OutputStream os = new FileOutputStream(file);
         long t1 = System.currentTimeMillis();
         byte[] arquivo = is.readAllBytes();
         os.write(arquivo);
