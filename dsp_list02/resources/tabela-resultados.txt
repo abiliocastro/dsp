@@ -1,0 +1,8 @@
+Tamanho do arquivo: 26,7 MB
+
+Tamanho do Bloco | Tempo de Cópia 
+    (bytes)      | (milisegundos)
+---------------------------------
+      32         |     3031
+      64         |     1595
+      128        |      804

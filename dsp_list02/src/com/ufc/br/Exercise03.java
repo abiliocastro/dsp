@@ -1,16 +1,27 @@
 package com.ufc.br;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
 import java.util.Scanner;
 
-public class Exercise01 {
+public class Exercise03 {
 
     private static Scanner lerTeclado = new Scanner(System.in);
 
     public static void main(String[] args) {
         String nomeArquivo = lerTeclado.nextLine();
-        String n1s = lerTeclado.nextLine();
-        String n2s = lerTeclado.nextLine();
+        Properties prop = new Properties();
+        try {
+            prop.load(Exercise03.class.getClassLoader().getResourceAsStream("config.properties"));
+        } catch (IOException e) {
+            System.out.println("Arquivo config.properties não encontrado");
+            return;
+        }
+        String n1s = prop.getProperty("linha_inicial");
+        String n2s = prop.getProperty("linha_final");
         if(!n1s.equals("") && !n2s.equals("")) { // Quando o caba coloca os dois números
             processaComDoisNumeros(nomeArquivo, n1s, n2s);
         } else if(!n1s.equals("")) { // Quando o caba coloca só o primeiro número
@@ -110,7 +121,7 @@ public class Exercise01 {
 
     private static Scanner getScanner(String nomeArquivo) {
         InputStream is;
-        is = Exercise01.class.getClassLoader().getResourceAsStream(nomeArquivo);
+        is = Exercise03.class.getClassLoader().getResourceAsStream(nomeArquivo);
         if(is == null) {
             System.out.println("Arquivo não encontrado");
             return null;
