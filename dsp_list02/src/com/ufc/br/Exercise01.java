@@ -14,7 +14,7 @@ public class Exercise01 {
         InputStream is = Exercise01.class.getClassLoader().getResourceAsStream(nomeArquivoOrigem);
         File file = new File("dsp_list02/resources/" + nomeArquivoDestino);
         OutputStream os = new FileOutputStream(file);
-        byte[] buffer = new byte[128];
+        byte[] buffer = new byte[32];
         int total_read;
         long t1 = System.currentTimeMillis();
         while((total_read = is.read(buffer)) > 0){
