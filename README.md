@@ -34,3 +34,12 @@ Repositório de listas e trabalhos da disciplina de Desenvolvimento de Software 
         linha_final = 3
         ```
     Depois, escreva uma classe Java que recebe via linha de comando o nome de um arquivo texto, e exibe da linha_inicial até a linha_final, conforme definidas no arquivo de propriedades config.properties.
+    
+## Lista de Exercícios 03
+1. Crie uma classe Java de entidade. Exemplo: Pessoa (id, nome, email, fone).
+
+2. Crie uma classe Java para instanciar objetos da classe definida na Questão 1 e adicionar esses objetos em uma Lista. Depois percorrer a lista e Serializar os objetos em disco/ssd.
+
+3. Crie uma classe java para ler / desserializar os objetos Serializados na Questão 2 e exibi-los.
+
+4. Crie uma classe Java para obter um arquivo via argumento de linha de comando e compactar e salvar o arquivo compactado em disco/ssd.
