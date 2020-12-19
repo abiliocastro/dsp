@@ -62,7 +62,7 @@ public class CadastrarTask {
 
     }
 
-    private static void salvarCsv(Task task) throws FileNotFoundException {
+    private static void salvarCsv(Task task) {
         printStream.println(task.getId()+","+
                 task.getProject()+","+
                 task.getSummary()+","+
