@@ -43,3 +43,13 @@ Repositório de listas e trabalhos da disciplina de Desenvolvimento de Software 
 3. Crie uma classe java para ler / desserializar os objetos Serializados na Questão 2 e exibi-los.
 
 4. Crie uma classe Java para obter um arquivo via argumento de linha de comando e compactar e salvar o arquivo compactado em disco/ssd.
+
+## Trabalho Prático 1
+1. Defina uma entidade principal relacionada a um domínio de problema e crie uma classe Java para representá-la.
+Exemplo: Cliente: id, nome, cpf, endereço, email, fone, cidade, uf, cep.
+
+2. Crie uma classe Java para cadastrar dados relacionados à entidade definida na questão 1. A classe deve receber dados via teclado e os salvar ao final de um arquivo CSV (append).
+
+3. Crie uma classe Java que recebe como entrada de teclado o nome de um arquivo qualquer em formato CSV e o converte para os formatos XML e JSON.
+
+4. Crie uma classe Java que recebe como entrada de teclado o nome de um arquivo qualquer em formato CSV e o compacta para o formato ZIP ou outro formato de compressão à sua escolha.
