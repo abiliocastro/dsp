@@ -53,3 +53,20 @@ Exemplo: Cliente: id, nome, cpf, endereço, email, fone, cidade, uf, cep.
 3. Crie uma classe Java que recebe como entrada de teclado o nome de um arquivo qualquer em formato CSV e o converte para os formatos XML e JSON.
 
 4. Crie uma classe Java que recebe como entrada de teclado o nome de um arquivo qualquer em formato CSV e o compacta para o formato ZIP ou outro formato de compressão à sua escolha.
+
+## Trabalho Prático 2
+1. Crie uma aplicação que use um banco relacional contendo uma tabela de funcionários e seus dependentes, com suas respectivas classes Java. Cada funcionário deve ter um id, cpf, matrícula, nome, email e telefone. Cada dependente tem somente id, cpf e nome. Os campos id, cpf e matrícula devem não devem permitir duplicação, ou seja devem ser únicos. Existe uma associação entre funcionários e dependentes de modo que um funcionário pode ter vários dependentes, mas um dependente somente está vinculado a um único funcionário. As tabelas devem ser criadas a partir dos mapeamentos das classes através do JPA. 
+
+2. Use o padrão de persistência DAO neste trabalho.
+
+3. Crie implementação JPA para seu DAO.
+
+4. Crie uma classe para adicionar via DAO pelo menos 6 funcionários com seus dependentes no banco de dados. Pelo menos 50% dos funcionários devem ter dependentes.
+
+5. Crie e exiba o resultado de consultas JPQL, Criteria, Named Query e SQL Nativas via uso do DAO para cada uma das consultas abaixo:
+
+    a) Mostrar os nomes e todos os dependentes com nomes iniciador por uma determinada letra, juntamente com o nome do funcionário ao qual ele depende. A letra inicial deve ser um parâmetro nomeado da consulta.
+    
+    b) Mostrar todos os dados de todos os funcionários funcionários.
+
+6. Crie uma transação em um método de um DAO com pelo menos 3 operações. Crie implementação para JPA. Faça com que a última operação por alguma restrição do banco de dados não funcione, e daí um rollback deve ocorrer.
